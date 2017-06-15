@@ -1,0 +1,22 @@
+<div class="bodyContainer container-fluid">
+  <app-banner [brandName]="brandName"></app-banner>
+  <md-sidenav-container>
+    <md-sidenav #sidenav [mode]="navBarMode" opened="false">
+      <app-side-navbar></app-side-navbar>
+    </md-sidenav>
+    <app-search-bar></app-search-bar>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
+
+    <footer class="bd-footer text-muted">
+      <div class="container">
+        <ul class="bd-footer-links">
+          <li><a href="https://fisandme.com/">FIS</a></li>
+        </ul>
+        <p>Abcd efg hijk lmno pq rstuv wxyz.</p>
+        <p>Abcd efg hijk lmno pq rstuv wxyz.</p>
+      </div>
+    </footer>
+  </md-sidenav-container>
+</div>

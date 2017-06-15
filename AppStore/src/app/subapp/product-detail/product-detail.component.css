@@ -1,0 +1,101 @@
+
+.border {
+        border: 1px solid darkgray;
+}
+.h1 {
+    font-size: 1.5rem;
+}
+
+.h2 {
+    font-size: 1.25rem;
+}
+
+.h3 {
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    font-size: 180px;
+}
+
+.app-image {
+}
+
+
+.screen-screenshot-container {
+
+}
+
+.header {
+    background-color: #ccc;
+    color: #007d8a;
+}
+.ss-images {
+    height: 400px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+}
+.ss-image {
+    height: 390px;    
+   padding: 10px;
+    padding-left: 50%;
+}
+.comment-input {
+    width:  100%;
+    border: 1px solid black;
+    height: 40px;
+}
+
+.comment-row {
+    width:  100%;
+    border: 1px solid black;
+}
+
+.like-reply {
+    font-size: 12px;
+    color: lightskyblue;
+}
+
+.specifiSitePriceContainer {
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #232f3e;
+    display: inline-block;
+    margin: 0.3em;
+}
+
+.productSpecificHeader {
+    background-color: #232f3e;
+    color: white;
+    padding: 0.3em;
+}
+
+.productPriceText {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.scrollButtons {
+    width: 80%;
+}
+
+.ratings-container {
+    background-color: green;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    line-height: 1rem;
+    font-size: .75rem;
+    padding: 2px 3px;
+}
+.review-count-container {
+    display: inline-block;
+    line-height: 1rem;
+    font-size: .75rem;
+    padding: 2px 3px;
+}

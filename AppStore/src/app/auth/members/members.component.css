@@ -1,0 +1,38 @@
+.members-panel-container {
+    background: white;
+    padding-top: .5em;
+    width: 100%;
+}
+
+header {
+    background:#3B8598;
+    width:100%;
+}
+
+.basic-btn {
+    background: #3B8598;
+    color: white;
+    width: 100%;
+    padding: 1em;
+    font-size: 1em;
+}
+
+#page {
+    padding:3em;
+    margin:0;
+}
+
+#page img {
+    margin-top:30px;
+}
+
+h2 {
+    margin:0;
+}
+
+
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+}

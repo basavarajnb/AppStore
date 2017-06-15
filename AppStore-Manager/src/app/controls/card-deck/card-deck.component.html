@@ -1,0 +1,18 @@
+<div class=" container-fluid px-3 py-2">
+  <div class="row px -3">
+    <div *ngFor="let item of appList" class="col-sp-12 col-md-6 col-lg-3 p-3">
+      <div class="card  ">
+        <div class="product-image-container p-2" style="display: flex;">
+          <img alt="card-img-top" class="card-img-top mx-auto" [src]="item.imageUrl">
+        </div>
+        <div class="card-block p-2">
+          <h6 class="card-title"><a [href]="item.productUrl" > {{item.name}}</a></h6>
+          <p class="card-text">{{item.desc}}</p>
+        </div>
+        <div class="card-footer p-2">
+          <small class="text-muted">{{item.updated}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

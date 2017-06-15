@@ -1,0 +1,30 @@
+
+.collase-panel  {
+    /*border: 1px solid darkgray;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 10px;*/
+}
+.collase-panel-default {
+    /*border-width: 1px;*/
+}
+
+.description-container {
+    margin-top: 15px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid darkgray;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.description-container h1 {
+    font-size: 2rem;
+}
+
+
+.category-container {
+    margin-top: 15px;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}

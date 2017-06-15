@@ -1,0 +1,31 @@
+<div class="banner">
+  <div class="banner-container container-fluid">
+    <div class="row py-1">
+      <div class="col-6">
+        <div class="input-group">
+          <div class="">
+            <button class="btn" routerLink="/">
+             <img class="logo-image d-inline-block" src="../assets/images/logo.png" alt="logo" />
+              <span class="px-2 d-inline-block" style="vertical-align: bottom;" id="">
+                  <span class="brand-name">{{brandName}}</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 text-right align-middle align-self-center">
+        <div class="">
+          <a *ngFor="let icon of socialIcons" [href]="icon.link" [title]="icon.alt">
+            <img class="top-image" [src]="icon.imageFile" [alt]="icon.alt">
+          </a>
+          <button *ngIf="!userAuthService.isUserSignedIn" md-button (click)="onSignInClick()" class="no-decoration">Log In
+            <md-icon class="align-middle">person</md-icon>
+          </button>
+          <button *ngIf="userAuthService.isUserSignedIn" md-button (click)="onSignOutClick()" class="no-decoration">Log Out
+            <md-icon class="align-middle">person</md-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

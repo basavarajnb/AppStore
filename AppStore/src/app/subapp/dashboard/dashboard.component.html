@@ -1,0 +1,50 @@
+<div class="product-list-container container-fluid">
+  <div class="row product-list-heading py-1">
+    <div class="col-6 text-left align-middle">
+      <h1 class="d-inline-block" style="font-size: 1.5rem;" (click)="viewDashboard()"> Dashboard</h1>
+    </div>
+    <div class="col-6 text-right align-middle align-self-center">
+      <div class="">
+      </div>
+    </div>
+  </div>
+  <div class="card-deck-container">
+    <div>
+      <div class="container-fluid px-0 py-2">
+        <div class="home-page">
+          <div *ngIf="dashboardView" class="dashboard-view">
+            <div class="home-heading-container py-1">
+            </div>
+            <div class="home-container home-panel home-panel-default">
+              <div class="row justify-content-around">
+                <div *ngFor="let item of dashEntry" class="col-sm-12 col-md-6 col-lg-6  px-6 py-3" (click)="ondashEntryClick(item);">
+                  <div class="card-container mx-auto">
+
+                    <div class="card card-inverse text-center">
+                      <div class="card-img-overlay">
+                        <div class="card-detail my-auto">
+                          <h1 class="card-title align-middle">{{item.name}}</h1>
+                          <h2 class="card-title align-middle">{{item.count}}</h2>
+                          <i class="large-icon material-icons">{{item.image}}</i>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="!dashboardView" class="list-view">
+
+            <app-list [dashListEntry]="dashListEntry"></app-list>
+            <input type="submit" class="btn btn-primary mb-4" (click)="viewDashboard()" value="Back" />
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

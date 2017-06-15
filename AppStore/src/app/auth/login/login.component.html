@@ -1,0 +1,164 @@
+<div class=" form-container sign-in-container " style="    width: 500px;">
+
+  <div class="container sign-in-form ">
+    <div class="signin-panel-header">
+      <h1 class="inline-block">User Login</h1>
+    </div>
+    <div class="">
+      <div *ngIf="signInForm">
+
+        <form #signInEIDForm="ngForm" (ngSubmit)="onSubmit(signInEIDForm)" novalidate>
+          <div class="form-group">
+            <br/>
+            <div class="row">
+              <div class="col-md-4">
+                <span class="control-label" style="padding-top:12px;height:30px"><span class="fis-req">*</span>
+
+                <div class="login-name-label inline-block">User ID / Alias</div>
+                </span>
+              </div>
+              <div class="col-md-8">
+                <div class="controls inline-block">
+                  <input class="form-control  fis-input" name="eid" required placeholder="Enter EID" ngModel #eid="ngModel" />
+                </div>
+              </div>
+
+            </div>
+            <br/>
+            <div class="row">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-8">
+                <div class="checkbox">
+                  <label> 
+                    <input type="checkbox" name="rememberMe" ngModel /> Remember Me
+                    </label>
+                </div>
+              </div>
+
+            </div>
+
+            <br/>
+            <div class="row">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-8">
+
+                <div *ngIf="formError" class="alert alert-danger">
+                  {{ formError }}
+                </div>
+                <div *ngIf="!submitting" class="inline-block">
+                  <button type="submit" class="btn btn-primary">Next</button>
+                </div>
+                <div class="inline-block">
+                  <a (click)="troubleClick()">Trouble signing in?</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <div *ngIf="optFormFlag">
+        <form #signInOTPForm="ngForm" (ngSubmit)="onSubmitPassOPT(signInOTPForm)" novalidate>
+          <div class="form-group" style="margin-top: 10px;">
+            <div class="row">
+              <div class="col-md-6">
+                <span class="control-label" style="padding-top:12px;height:30px"><span class="fis-req">*</span>
+
+                <div class="login-name-label inline-block">Enter OTP</div>
+                </span>
+              </div>
+              <div class="col-md-6">
+                <div class="controls inline-block">
+                  <input class="form-control  fis-input" name="otp" required placeholder="Enter OTP" ngModel #otp="ngModel" />
+                </div>
+              </div>
+
+            </div>
+            <br/>
+            <div class="row">
+              <div class="col-md-6">
+                <span class="control-label" style="padding-top:12px;height:30px"><span class="fis-req">*</span>
+
+                <div class="login-name-label inline-block">Enter Password</div>
+                </span>
+              </div>
+              <div class="col-md-6">
+                <div class="controls inline-block">
+                  <input class="form-control  fis-input" type="password" name="userPassword" required placeholder="Enter Password" ngModel
+                    #userPassword="ngModel" />
+                </div>
+              </div>
+
+            </div>
+            <br/>
+
+            <div class="row">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-8">
+
+                <div *ngIf="formError" class="alert alert-danger">
+                  {{ formError }}
+                </div>
+                <div *ngIf="!submitting" class="inline-block">
+                  <button type="submit" class="btn btn-primary">Sign In</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </form>
+      </div>
+
+      <div *ngIf="troubleFlag">
+        <form #signInOTPForm="ngForm" (ngSubmit)="onSubmitPassOPT(signInOTPForm)" novalidate>
+          <div class="form-group">
+            Please select your issue:
+            <div class="row">
+              <div class="checkbox">
+                <label> 
+                    <input type="radio" name="rememberMe" ngModel /> I forgot my username.
+                    </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="checkbox">
+                <label> 
+                    <input type="radio" name="rememberMe" ngModel /> I think my account is locked.
+                    </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="checkbox">
+                <label> 
+                    <input type="radio" name="rememberMe" ngModel /> I have problems receiving the One Time PIN.
+                    </label>
+              </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+              <div class="inline-block">
+                <button type="submit" class="btn fis-secondary" (click)="troubleCancelClick()">Cancel</button>
+              </div>
+              <div class="inline-block" style="margin-left: 10px;">
+
+              </div>
+              <div class="inline-block">
+                <button type="submit" class="btn btn-primary">Proceed</button>
+              </div>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

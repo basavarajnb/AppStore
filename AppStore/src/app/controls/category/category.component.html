@@ -1,0 +1,16 @@
+<div class="row justify-content-around">
+  <div *ngFor="let item of categories" class="col-sm-12 col-md-6 col-lg-6  px-3 py-3" (click)="onCategoryClick(item);">
+    <div class="card-container mx-auto">
+
+      <div class="card card-inverse text-center">
+        <div class="card-img-overlay">
+          <div class="card-detail my-auto">
+            <h2 class="card-title align-middle">{{item.categoryTitle}}</h2>
+            <img class="card-img align-middle" [src]="item.categoryImageUrl" alt="Card image">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

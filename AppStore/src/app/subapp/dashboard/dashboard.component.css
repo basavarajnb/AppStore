@@ -1,0 +1,26 @@
+.card-container {
+    width: 500px;
+    border: 1px solid black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    background-color: #5cb85c;
+    height: 300px;
+}
+
+.card-detail {
+    padding: 15%;
+}
+
+.large-icon {
+    font-size: 50px;
+}
+
+.product-list-heading {
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+}
+.product-list-container {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}

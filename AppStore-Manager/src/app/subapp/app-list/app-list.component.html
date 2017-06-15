@@ -1,0 +1,100 @@
+<div class="row height-50">
+  <div class="col-3 bg-info border" (click)="headerSelect(1);">
+    <div class="text-center white-color align-middle pt-2 ">
+      <h1>{{headers.h1}}</h1>
+    </div>
+  </div>
+  <div class="col-3 bg-warning border" (click)="headerSelect(2);">
+    <div class="text-center white-color align-middle pt-2">
+      <h1>{{headers.h2}}</h1>
+    </div>
+  </div>
+  <div class="col-3 bg-success border" (click)="headerSelect(3);">
+    <div class="text-center white-color align-middle pt-2">
+      <h1>{{headers.h3}}</h1>
+    </div>
+  </div>
+  <div class="col-3 bg-danger border" (click)="headerSelect(4);">
+    <div class="text-center white-color align-middle align-middle pt-2">
+      <h1>{{headers.h4}}</h1>
+    </div>
+  </div>
+</div>
+<div class=" py-3">
+  <div *ngIf="selectedItem === 'developer' ">
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>#</th>
+          <th>Developer Name</th>
+          <th>Designation</th>
+          <th>Approve / Reject</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dev of resultList; let i = index;">
+          <th scope="row">{{dev.id}}</th>
+          <td>{{dev.name}}</td>
+          <td>{{dev.designation}}</td>
+          <td>
+            <span *ngIf="currentTab === '1'">  
+              <input type="submit" *ngIf="dev.state === 'new' || dev.state === 'rejected'" class="btn btn-success" value="Approve" (click)="approveClick(dev)" />
+              <input type="submit" *ngIf="dev.state === 'new' || dev.state === 'approved'" class="btn btn-danger" value="Reject" (click)="rejectClick(dev)" />
+            </span>
+            <span *ngIf="currentTab === '2'">  
+              <input type="submit" class="btn btn-success" value="Approve" (click)="approveClick(dev)" />
+              <input type="submit" class="btn btn-danger" value="Reject" (click)="rejectClick(dev)" />
+            </span>
+            <span *ngIf="currentTab === '3'">  
+              <input type="submit" class="btn btn-danger" value="Reject" (click)="rejectClick(dev)" />
+            </span>
+            <span *ngIf="currentTab === '4'">  
+              <input type="submit" class="btn btn-success" value="Approve" (click)="approveClick(dev)" />
+            </span>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div *ngIf="selectedItem === 'application' ">
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>#</th>
+          <th>Logo</th>
+          <th>App Name</th>
+          <th>Developer</th>
+          <th>Approve / Reject</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let app of resultList; let i = index;">
+          <th scope="row">{{i+1}}</th>
+          <td><i class="large-icon material-icons">{{app.image}}</i></td>
+          <td>{{app.name}}</td>
+          <td>{{app.developer}}</td>
+          <td>
+            <span *ngIf="currentTab === '1'">  
+              <input type="submit" *ngIf="app.state === 'new' || app.state === 'rejected'" class="btn btn-success" value="Approve" (click)="approveClick(app)" />
+              <input type="submit" *ngIf="app.state === 'new' || app.state === 'approved'" class="btn btn-danger" value="Reject" (click)="rejectClick(app)" />
+            </span>
+            <span *ngIf="currentTab === '2'">  
+              <input type="submit" class="btn btn-success" value="Approve" (click)="approveClick(app)" />
+              <input type="submit" class="btn btn-danger" value="Reject" (click)="rejectClick(app)" />
+            </span>
+            <span *ngIf="currentTab === '3'">  
+              <input type="submit" class="btn btn-danger" value="Reject" (click)="rejectClick(app)" />
+            </span>
+            <span *ngIf="currentTab === '4'">  
+              <input type="submit" class="btn btn-success" value="Approve" (click)="approveClick(app)" />
+            </span>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<div class="container-fluid">
+
+<div class=""> 
+  <div class="row product-list-heading py-1">
+    <div class="col-6 text-left pt-2">
+      <h1 class="d-inline-block" style="font-size: 1.7rem;" >Upload Application Package</h1>
+    </div>
+    <div class="col-6 text-right align-middle align-self-center">
+      <div class="">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div *ngIf="!uploaded" class="container w-70  mt-4 ">
+
+
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">App name</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="App Name" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-search-input" class="col-2 col-form-label">App Version</label>
+      <div class="col-10">
+        <input class="form-control" type="search" value="1.0" id="example-search-input">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">App Build No</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="345778" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Compatibility</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="IOS 10" id="example-text-input">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Description</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="Description" id="example-text-input">
+      </div>
+    </div>
+
+    <div class="form-group row">
+
+      <label for="example-text-input" class="col-2 col-form-label">Screenshots</label>
+      <div class="col-10">
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">Please upload Screenshots of your own application, Thank you.</small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+
+      <label for="example-text-input" class="col-2 col-form-label">Application</label>
+      <div class="col-10">
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">Please upload application package here.</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-url-input" class="col-2 col-form-label">URL</label>
+      <div class="col-10">
+        <input class="form-control" type="url" value="www.example.com" id="example-url-input">
+      </div>
+    </div>
+
+
+    <div class="form-check">
+      <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Accept T&C
+    </label>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="submitClick()">Submit</button>
+
+
+
+
+
+  </div>
+
+  <div *ngIf="uploaded">
+    <button type="submit" class="btn btn-primary" (click)="submitClick()">Back</button>
+
+    <div class="container">
+      <div class="row justify-content-around">
+        <div class="col-6">
+          <style>
+          .success-container {
+            height: 300px;
+          }
+          .large-icon {
+            font-size: 50px;
+          }
+          </style>
+          <div class="success-container bg-success text-center p-3">
+            <h1 class="">Uploaded, Thank you</h1>
+            <i class="large-icon material-icons">done</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>

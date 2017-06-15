@@ -1,0 +1,20 @@
+<div class="product-list-container container-fluid">
+  <div class="row product-list-heading py-1">
+    <div class="col-6 text-left align-middle">
+      <h1 class="d-inline-block" style="font-size: 1.5rem;"> {{categoryName}} Applications</h1>
+    </div>
+    <div class="col-6 text-right align-middle align-self-center">
+      <div class="">
+        <button md-button class="no-decoration">Latest
+          <i class="material-icons">arrow_drop_down</i>
+          </button>
+        <button md-button  class="no-decoration">Rating
+          <i class="material-icons">arrow_drop_down</i>
+          </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-deck-container container">
+    <app-card-deck [appList]="appsList"></app-card-deck>
+  </div>
+</div>

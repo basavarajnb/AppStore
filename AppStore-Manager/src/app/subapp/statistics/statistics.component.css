@@ -1,0 +1,12 @@
+.w-40 {
+        width: 50% !important;
+}
+
+
+.product-list-heading {
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+}
+.product-list-container {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
